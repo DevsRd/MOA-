@@ -1,8 +1,8 @@
 import Head from "next/head"
 import TopBar from "./topBar";
 import Footer from "./footer"
-import Navigation from "./navigation.js";
-import Social from "./social.js";
+
+
 
 
 const Container = (props) => (
@@ -17,51 +17,20 @@ const Container = (props) => (
 
         </Head>
 
-        <div className="center">
-            <TopBar />
+        <div>
+            <TopBar/>
             <div className="Container">
-                <Navigation />
-                <div className="centerr">
+                <div>
                     {props.children}
                     <span></span>
                     <Footer />
                 </div>
-                <Social />
             </div>
         </div>
-        <style jsx>{`
-                .center{
-                    position: absolute;
-                    min-width: 350px;
-                    margin: 0 auto;
-                    padding:0;
-                
-                }
-                @media(min-width:765px){
-                .center {
-                    width:100%;
-                    padding: 0; 
-                }
-                .centerr{
-                    margin: 0 auto;
-                }
-                .Container {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    width:100%;
-                    max-width:1080px;
-                    margin:0 auto;
-                }}
-                .Container {
-                    padding: 0 10px;
-                }
-                .img{ 
-                    max-width:100%;
-                    height: auto;
-                  }
-                  span {
-                    margin-top: 40px;
-                }
+        <style jsx>{`                  
+                    .Container{
+                        text-align:center;
+                    }
                 `}
         </style>
     </>

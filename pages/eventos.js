@@ -1,58 +1,35 @@
 import Head from "next/head";
-import Container from "../components/Container"
-import Link from 'next/link'
+import Container from "../components/Container";
 
-const eventos = () => {
+const Eventos = () => {
     return (
         <Container>
             <Head>
-                <title>Moa-Eventos</title>
+                <title>MÖA-Eventos</title>
             </Head>
-            <div className="main">
-                <h1>EVENTOS EN MÖA</h1>
-                <img src="/Optimized-boda.jpg" />
-                <span></span>
-                <h3>SALA PRIVADA - SALON EVENTOS</h3>
-                <span></span>
-                <p>En Möa podemos ofrecerte momentos especiales para tus evento, tanto en
-                    nuestra sala como en nuestras terrezza. Pequeños e íntimos eventos cuidados
-                    hasta el último detalle.
+            <div className="hero">
+                <ul>
+                    <li> <img src="eventos.jpg" alt="1" /></li>
+                    <li> <img src="eventos2.jpg" alt="2" /></li>
+                    <li> <img src="eventos3.jpg" alt="3" /></li>
+                </ul>
+            </div>
+            <img src="T04.png" alt=""  className="title" />
+            <div className="container">
+                <p>
+                    Nuestros restaurantes están predestinados a ser tu lugar encantado para celebrar ese
+                    compromiso especial con tu pareja. Disponemos de todos os elementos para llevar a término tu celebración
+                    y banquete, a la vez que te ofrecemos los servicios de nuestros hoteles para hospedarte.
                 </p>
-                <Link href="/contacta">
-                    <a>SOLICITAR</a>
-                </Link>
+                <p>
+                    Si quieres hacer tu evento de empresa o comercial, nuestros restaurantes, jardines, terrazas y
+                    salas son perfectas para tí. Contamos con todos los elementos necesarios para
+                    llevar a cabo tus necesidades.
+                </p>
 
             </div>
-            <style jsx>{`
-            @media(min-width:750px){
-                img {
-                    height: 350px;
-                    width: 500px;
-                }}
-                p { margin-top: 18px;
-                    font-size: 13px;
-                    color: rgb(90, 90, 90);
-                }
-                h3{
-                    color: rgb(90, 90, 90);
-                    text-align:center;
-                    font-size:14px;
-                
-                }
-                span {
-                    display: block;
-                    background-color:rgb(90, 90, 90);
-                    height: 1.8px;
-                    margin: 15px 0; 
-                }
-                img { height: auto;
-                    width: 100%;}
-                    a{
-                        margin-top:2000px
-                    }
-                `}
-            </style>
         </Container>
     )
 }
-export default eventos;
+
+export default Eventos;

@@ -1,113 +1,101 @@
 import Head from "next/head"
 import Container from "../components/Container"
-import swal from "sweetalert";
-//import emailjs from 'emailjs';
 
 const reservas = () => {
 
-  /*  function sendEmail(e) {
-        e.preventDefault();
-    
-        emailjs.sendForm('lomoli', 'template_9ryeet9', e.target, 'user_78Gpd36t9QDfFTquJuuma')
-          .then((result) => {
-              swal(" Gracias por solicitar su reserva. En breve le confirmaremos.");
-          }, (error) => {
-              console.log(error.text);
-          });
-      }*/
-    
-   /* const handleSubmit = async (e) => {
-        e.preventDefault()
-        const res = await fetch(
-            'http://localhost:4000/api/reservas/createreservas',
-            {
-              body: JSON.stringify({
-                comensal : e.target.nombre.value,
-                correo : e.target.correo.value,
-                telefono: e.target.telefono.value,
-               // instagram: e.target.instagram.value,
-               espacio : e.target.espacio.value,
-                 pax: e.target.comensales.value,
-               fecha: e.target.fecha.value,
-                hora: e.target.hora.value,
-                promociones: e.target.promociones.value,
-                cookie: e.target.cookie.value
-              }),
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              method: 'POST'
-            }
-          )
-    }*/
+    /* function sendEmail(e) {
+         e.preventDefault();
+     
+         emailjs.sendForm('lomoli', 'template_9ryeet9', e.target, 'user_78Gpd36t9QDfFTquJuuma')
+           .then((result) => {
+               swal(" Gracias por solicitar su reserva. En breve le confirmaremos.");
+           }, (error) => {
+               console.log(error.text);
+           });
+       }*/
 
     return (
         <Container>
-            <Head><title>Moa-Reservas</title></Head>
+            <Head><title>MÖA-Reservas</title></Head>
             <div className="main">
-                <h1>RESERVA TU MESA</h1>
-                <span></span>
-                <h3>Rellena el formulario para poder reservar tu espacio</h3>
-                <form >
-                    <h2>COMENSAL</h2>
-                    <span></span>
-                    <div className="inputs">
-                        <input name="nombre" type="text" placeholder="Nombre" required/>
-                        <input name="correo" type="mail" placeholder="Correo" required />
-                        <input name="telefono" type="number" placeholder="Teléfono" required/>
-                        <input name="instagram" type="text" placeholder="Instagram" />
-                    </div>
-                    <h2>QUIERO RESERVAR</h2>
-                    <span></span>
-                    <select name="espacio"  >
-                        <option value="">Espacio</option>
-                        <option>Terraza</option>
-                        <option>Interior</option>
-                    </select>
-                    <select name="comensales" >
-                        <option value="1" >Numero de Comensales</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                    </select>
-                    <div className="date">
-                        <label>Fecha</label>
-                        <input name="fecha" type="date" min="2021-08-06" required/>
-                        <label className="hora">Hora</label>
-                        <input name="hora" type="time" min="13:00" max="23:00" required/>
-                    </div>
-                    <div className="permisos">
-                        <div>
-                            <input type="checkbox" id="permiso" name="promociones" />
-                            <input type="checkbox" id="permisos" name="cookie" required/>
+                <img src="T06.png" alt="bienvenidos"  className="title" />
+                <form className="formulario">
+                    <div> <h2>RESTAURANTE</h2>
+                        <div className="inputs">
+                            <select name="pais"  >
+                                <option value="">Pais</option>
+                                <option>España</option>
+                                <option>Bavaro</option>
+                            </select>
+                            <select name="localidad"  >
+                                <option value="">Localidad</option>
+                            </select>
+                            <select name="hotel"  >
+                                <option value="">Hotel</option>
+                            </select>
                         </div>
-                        <div>
-                            <label htmlFor="permiso">Acepto recibir noticias y promociones del restaurante</label>
-                            <label htmlFor="permisos">He leído las Políticas de empresa y acepto las condiciones </label>
+                        <h2 className="comensales">COMENSAL</h2>
+                        <div className="inputs">
+                            <input name="nombre" type="text" placeholder="Nombre" required />
+                            <input name="correo" type="mail" placeholder="Correo" required />
+                            <input name="telefono" type="number" placeholder="Teléfono" required />
+                            <input name="instagram" type="text" placeholder="Instagram" />
+                        </div>
+                        <h2>DOMICILIO</h2>
+                        <div className="inputs">
+                            <input name="ciudad" type="text" placeholder="Ciudad" required />
+                            <input name="poblacion" type="text" placeholder="Poblacion" required />
+                            <select name="pais"  >
+                                <option value="">Pais</option>
+                                <option>España</option>
+                                <option>Republica Dominicana</option>
+                            </select>
+
                         </div>
                     </div>
-                    <h2>SOLICITUDES</h2>
-                    <textarea name="solicitudes" id="solicitudes" cols="47.8" rows="5"></textarea>
-                    <button type="submit" className="d-block">SOLICITAR</button>
+
+                    <div>    
+                         <h2>RESERVA</h2>
+                        <select name="espacio"  >
+                            <option value="">Espacio</option>
+                            <option>Terraza</option>
+                            <option>Interior</option>
+                        </select>
+                        <select name="comensales" >
+                            <option value="1" >Numero de Comensales</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select>
+                        <div className="date">
+                            <label>Fecha</label>
+                            <input name="fecha" type="date" min="2021-08-06" required />
+                            <label className="hora">Hora</label>
+                            <input name="hora" type="time" min="13:00" max="23:00" required />
+                        </div>
+                        <div className="permisos">
+                            <div>
+                                <input type="checkbox" id="permiso" name="promociones" />
+                                <input type="checkbox" id="permisos" name="cookie" required />
+                            </div>
+                            <div>
+                                <label htmlFor="permiso">Acepto recibir noticias y promociones del restaurante</label>
+                                <label htmlFor="permisos">He leído las Políticas de empresa y acepto las condiciones </label>
+                            </div>
+                        </div>
+                        <h2>SOLICITUDES</h2>
+                        <textarea name="solicitudes" id="solicitudes" cols="47.8" rows="5"></textarea>
+                        <button type="submit">RESERVAR</button></div>
+
                 </form>
 
             </div>
             <style jsx>{`
-         
-            h2{
-                
-                margin:35px 0px 3px 0px;
-                padding-left:10px;
-            }
-            h3{
-                margin:10px 0 0px 0;
-            }
-            
             .date {
                 width:100%;
                 font-size:11.8px;
@@ -120,11 +108,6 @@ const reservas = () => {
             }
             .date label{
                 margin: 0 6.5px;
-            }
-            span {
-                display: block;
-                background-color:rgb(90, 90, 90);
-                height: 1px;
             }
             input{
                 font-size:11.8px;
@@ -148,6 +131,7 @@ const reservas = () => {
             .permisos{
                 display: grid;
                 grid-template-columns: 5% 95%;
+                padding: 0 60px;
                 margin-top:20px;
                 align-items:center;
             }
@@ -156,11 +140,29 @@ const reservas = () => {
                 color: rgb(167, 167, 167); 
                 margin-bottom: 0;  
             }
-            img { 
-                height: auto;
-                 width: 100%;
+            button{
+                text-align: center;
+                margin:25px auto;
+                padding: 2px 60px;
+                background-color:white;
+                border: solid 1px rgb(90, 90, 90);
             }
+       
             @media(min-width:750px){
+                .formulario{
+                    margin: 0 auto;
+                    max-width:900px;
+                    display:grid;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .formulario h2{
+                    margin-left:38px;
+                    text-align:left;
+                    width:85%;
+                }
+                .comensales{
+                    margin-top:80px;
+                }
                 .date {
                     text-align: center;
                     width:85%;

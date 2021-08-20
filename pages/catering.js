@@ -1,48 +1,44 @@
 import Head from "next/head";
-import Link from 'next/link'
 import Container from "../components/Container";
 
-const catering = () => {
+const Catering = () => {
     return (
         <Container>
             <Head>
-                <title>Moa-catering</title>
+                <title>MÖA-Catering</title>
             </Head>
-            <div className="main">
-                <h1>CATERING</h1>
-                <img src="/catering-ibiza_2.jpg" />
-                <p>La cocina de Möa puede prepararte nuestros platos 
-en base a nuestro Menú de Temporada o puede prapararte bajo tus gustos 
-un menú acorde a tus invitados. Los mejores productos artesanales y auctóctonos harán de tu catering la estrella del evento.
+            <div className="cateringImg">
+               
+            </div>
+            <img src="T05.png" alt=""  className="title"/>
+            <div className="container">
+                <p>
+                Gracias a nuestros formatos de cocinas profesionales y a nuestro equipo y 
+                su experiencia, podemos ofrecerte 
+                servicios de catering para tus fiestas, celebraciones, bodas, etc. 
                 </p>
-                <Link href="/contacta">
-                    <a>SOLICITAR</a>
-                </Link>
+                <p>
+                Preparamos tu catering listo para servir, ofreciéndote también 
+                servicio de camareros, chef  cooking, vinos, catas. 
+                </p>
 
             </div>
-            <style jsx>{`
-            @media(min-width:750px){
-              
-                h1{
-                    font-weight: 300;
-                    color: rgb(167, 167, 167);
-                }
-                img {
-                    height: 350px;
-                    width: 500px;
-                }
-                p { margin-top: 18px;
-                    font-size: 13px;
-                    color: rgb(90, 90, 90);
-                }
-                span {
-                    margin-top: 40px;
-                }}
-                img { height: auto;
-                    width: 100%;}
+
+
+            <style jsx>
+                {`
+                .cateringImg{
+                    width: 100%;
+                    height: 35.5vh;
+                    background: url("/catering.jpg") no-repeat center center/cover;
+                    background-size: cover ;
+                    box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+                  }
+                 }
                 `}
             </style>
         </Container>
     )
 }
-export default catering;
+
+export default Catering;
