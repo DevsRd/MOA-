@@ -82,7 +82,7 @@ const topBar = () => {
                         </Link>
                     </div>
                 </div>
-                <img className="orla" src="/orla.png" alt="moa logo" />
+                <img className="orla" src="/Orla.png" alt="orla" />
             </section>
 
             <style jsx>
