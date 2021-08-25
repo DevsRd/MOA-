@@ -1,25 +1,28 @@
-import Head from "next/head"
-import Container from "../components/Container"
+import Head from "next/head";
+import Container from "../components/Container";
+import swal from "sweetalert";
+import emailjs from 'emailjs-com';
+
 
 const reservas = () => {
 
-    /* function sendEmail(e) {
+    function sendEmail(e) {
          e.preventDefault();
      
-         emailjs.sendForm('lomoli', 'template_9ryeet9', e.target, 'user_78Gpd36t9QDfFTquJuuma')
+         emailjs.sendForm('Mom', 'template_7iqlxw5', e.target, 'user_78Gpd36t9QDfFTquJuuma')
            .then((result) => {
                swal(" Gracias por solicitar su reserva. En breve le confirmaremos.");
            }, (error) => {
                console.log(error.text);
            });
-       }*/
+       }
 
     return (
         <Container>
             <Head><title>MÖA-Reservas</title></Head>
             <div className="main">
                 <img src="T06.png" alt="bienvenidos"  className="title" />
-                <form className="formulario">
+                <form  onSubmit={ sendEmail}  className="formulario">
                     <div> <h2>RESTAURANTE</h2>
                         <div className="inputs">
                             <select name="pais"  >
@@ -45,7 +48,7 @@ const reservas = () => {
                         <div className="inputs">
                             <input name="ciudad" type="text" placeholder="Ciudad" required />
                             <input name="poblacion" type="text" placeholder="Poblacion" required />
-                            <select name="pais"  >
+                            <select name="paisL"  >
                                 <option value="">Pais</option>
                                 <option>España</option>
                                 <option>Republica Dominicana</option>
@@ -176,6 +179,10 @@ const reservas = () => {
                     width: 90%
                     resize: none;
                 }
+                .permisos{
+                    padding: 0 31px;
+                    margin-top:20px;
+                    align-items:center;
             }
                 `}
             </style>

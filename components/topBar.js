@@ -120,11 +120,14 @@ const topBar = () => {
                     .social{
                         top:0;
                         right: 0;
-                        margin-top:10px;
-                        margin-right:7px;
+                        margin-top:28px;
+                        margin-right:17px;
+                        padding-left:5px;
                         position: absolute;
+                        border-left: 2px solid black;
                     }
                     .social a{
+                        font-size: 12px;
                         display:block;
                       
                     }

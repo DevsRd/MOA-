@@ -76,7 +76,7 @@ li{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         place-content: center;
-        box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+        
     }
     .hero ul{
         animation: none;

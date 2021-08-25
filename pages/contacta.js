@@ -12,9 +12,8 @@ const Index = () => {
             <div className="main">
                 <img src="T07.png" alt="contacta"  className="title"/>
                 <div className="container">
-               <Restaurant/>
-               <Restaurant/>
-               <Restaurant/>
+             <p> Estamos trabajando en nuestros restaurantes y hoteles. Próximamente estaremos abiertos al público. Igualmente, 
+                puedes contactarnos por correo a <a>info@moarestaurant.com</a></p>  
                 </div>
                
                
@@ -22,19 +21,7 @@ const Index = () => {
 
             <style jsx>
                 {`  
-                .container{
-                    display:grid;
-                    grid-template-columns: repeat(2, 1fr);
-
-                }
-                
-                @media(min-width:1030px){
-                    .container{
-                        justify-content: center;
-                        place-content:center;
-                        grid-template-columns: repeat(3, 1fr);
-
-                    }}
+               
                 `}
             </style>
         </Container>

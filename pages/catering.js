@@ -32,7 +32,6 @@ const Catering = () => {
                     height: 35.5vh;
                     background: url("/catering.jpg") no-repeat center center/cover;
                     background-size: cover ;
-                    box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
                   }
                  }
                 `}
